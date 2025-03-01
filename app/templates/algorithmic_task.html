@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Алгоритмическая задача{% endblock %}
+
+{% block content %}
+<h1>Алгоритмическая задача</h1>
+
+<!-- JPG с условием задачи -->
+<img src="{% static 'images/algorithmic_task.jpg' %}" alt="Задача" style="max-width: 600px; margin-bottom: 20px;">
+
+<!-- Форма для ввода данных (3 строки) -->
+<form method="POST">
+  {% csrf_token %}
+  <label for="user_input">Введите данные (3 строки):</label><br>
+  <textarea id="user_input" name="user_input" rows="6" cols="60">{{ request.POST.user_input }}</textarea><br><br>
+  <button type="submit">Решить</button>
+</form>
+
+<!-- Результат решения -->
+{% if result %}
+<h2>Результат:</h2>
+<pre>{{ result }}</pre>
+{% endif %}
+{% endblock %}

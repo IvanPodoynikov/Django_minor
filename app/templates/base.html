@@ -3,36 +3,24 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}My Django App{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>{% block title %}Моё приложение{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
-<body> 
+<body>
 <header>
   <nav>
     <ul>
       <li><a href="{% url 'home' %}">Главная</a></li>
-      <li><a href="{% url 'page1' %}">Страница 1</a></li>
-      <li><a href="{% url 'page2' %}">Страница 2</a></li>
-      <li><a href="{% url 'page3' %}">Страница 3</a></li>
-      <li><a href="{% url 'task' %}">Алгоритмическая задача</a></li>
-      <li><a href="{% url 'education' %}">Требования</a></li>
-      <!-- Ссылка на внутренний фрагмент (закладку) -->
-      <li><a href="#bookmark1">Закладка</a></li>
-      <!-- Внешняя ссылка (открывается в новом окне) -->
-      <li><a href="https://www.example.com" target="_blank">Внешний сайт</a></li>
-      <!-- Графическая ссылка -->
-      <li>
-        <a href="https://www.example2.com" target="_blank">
-          <img src="{% static 'images/logo.png' %}" alt="Логотип" style="height:30px;">
-        </a>
-      </li>
+      <li><a href="{% url 'algorithmic_task' %}">Алгоритмическая задача</a></li>
+      <li><a href="{% url 'about' %}">О проекте</a></li>
     </ul>
   </nav>
 </header>
+
 <main>
-    {% block content %}
-    {% endblock %}
+  {% block content %}{% endblock %}
 </main>
+
 <footer>
   <p>© 2025 My Django App</p>
 </footer>
