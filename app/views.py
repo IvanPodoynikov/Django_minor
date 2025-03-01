@@ -69,37 +69,31 @@ def algorithmic_task(request):
 ABOUT_DATA = {
     "education_link": "https://github.com/vmarshirov/WebApplicationsDevelopment/blob/main/task1/education.txt",
     "my_info": {
-        "fio": "Иванов Иван Иванович",
-        "photo": "images/my_photo.jpg",     # лежит в static/images/my_photo.jpg
-        "email": "ivanov@example.com",
-        "phone": "+7 (123) 456-78-90"
+        "fio": "Подойников Иван Александрович",
+        "photo": "images/maxresdefault.jpg",     # лежит в static/images/maxresdefault.jpg
+        "email": "podoynikov@example.com",
+        "phone": "+7 (953) 456-78-90"
     },
     "program_info": {
-        "name": "Название образовательной программы",
-        "description": "Краткое описание программы.",
+        "name": "Математика",
+        "description": "Математика",
         "director": {
-            "fio": "Петров Пётр Петрович",
-            "photo": "images/director.jpg",
-            "email": "petrov@example.com"
+            "fio": "Скрипченко Александра Сергеевна",
+            "photo": "images/decan.jpg",
+            "email": "skripchenko@example.com"
         },
         "manager": {
-            "fio": "Сидоров Сидор Сидорович",
+            "fio": "Иванова Татьяна Сергеевна",
             "photo": "images/manager.jpg",
-            "email": "sidorov@example.com"
+            "email": "ivanovats@example.com"
         }
     },
     "classmates": [
         {
-            "name": "Сокурсник 1",
-            "photo": "images/sokursnik1.jpg",
-            "email": "mate1@example.com",
+            "name": "Яковчук Николай Павлович",
+            "photo": "images/kolya.jpg",
+            "email": "yakovchuk@example.com",
             "phone": "+7 (111) 111-11-11"
-        },
-        {
-            "name": "Сокурсник 2",
-            "photo": "images/sokursnik2.jpg",
-            "email": "mate2@example.com",
-            "phone": "+7 (222) 222-22-22"
         }
     ]
 }

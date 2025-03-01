@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
-{% block title %}Главная{% endblock %}
+{% load static %}
+
+{% block title %}Главная страница{% endblock %}
+
 {% block content %}
-<h1>Добро пожаловать на наш сайт</h1>
-<p>Это главная страница приложения.</p>
+<h1>Главная страница</h1>
+<p>Добро пожаловать на наш сайт!</p>
+
+<!-- Ссылка, ведущая на подстраницу about + якорь #myself -->
+<p>
+  <a href="{% url 'about' %}#myself">
+    Больше узнать обо мне
+  </a>
+</p>
 {% endblock %}

@@ -8,18 +8,19 @@
 
 <!-- Ссылка на требования -->
 <p>
-  <strong>Ссылка на требования:</strong>
-  <a href="{{ education_link }}" target="_blank">{{ education_link }}</a>
-</p>
-
-<h2>Я и моя образовательная программа</h2>
-
-<h3>Я (ФИО, фото, электронка, телефон)</h3>
-<p><strong>ФИО:</strong> {{ my_info.fio }}</p>
-<p><strong>Фото:</strong></p>
-<img src="{% static my_info.photo %}" alt="{{ my_info.fio }}" style="max-width: 150px;">
-<p><strong>Электронная почта:</strong> {{ my_info.email }}</p>
-<p><strong>Телефон:</strong> {{ my_info.phone }}</p>
+    <strong>Ссылка на требования:</strong>
+    <a href="{{ education_link }}" target="_blank">{{ education_link }}</a>
+  </p>
+  
+  <!-- Вот здесь добавляем id="myself" -->
+  <h2 id="myself">Я и моя образовательная программа</h2>
+  
+  <!-- Данные о вас -->
+  <h3>Обо мне</h3>
+  <p><strong>ФИО:</strong> {{ my_info.fio }}</p>
+  <img src="{% static my_info.photo %}" alt="{{ my_info.fio }}" style="max-width: 150px;">
+  <p><strong>Электронная почта:</strong> {{ my_info.email }}</p>
+  <p><strong>Телефон:</strong> {{ my_info.phone }}</p>
 
 <h3>Название программы</h3>
 <p>{{ program_info.name }}</p>
