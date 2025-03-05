@@ -15,11 +15,21 @@
   <!-- Вот здесь добавляем id="myself" -->
   <h2 id="myself">Я и моя образовательная программа</h2>
   
-  <!-- Данные о вас -->
+  <!-- Данные обо мне -->
   <h3>Обо мне</h3>
   <p><strong>ФИО:</strong> {{ my_info.fio }}</p>
-  <p><strong>Электронная почта:</strong> {{ my_info.email }}</p>
-  <p><strong>Телефон:</strong> {{ my_info.phone }}</p>
+
+  <!-- Контакты -->
+<p><strong>Контакты для связи:</strong>
+    <!-- Ссылка на почту -->
+    <a href="mailto:{{ my_info.email }}" style="margin-left: 10px;">
+      <img src="{% static 'images/envelope.png' %}" alt="Email" style="height: 24px; margin-right: 10px;">
+    </a>
+    <!-- Ссылка на Telegram -->
+    <a href="https://t.me/ipodoynikov" target="_blank">
+      <img src="{% static 'images/telegram.png' %}" alt="Telegram" style="height: 24px;">
+    </a>
+  </p>
 
 <h3>Название программы</h3>
 <p>{{ program_info.name }}</p>

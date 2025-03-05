@@ -5,6 +5,9 @@ import io
 def home(request):
     return render(request, 'home.html')
 
+def main_page(request):
+    return render(request, 'main_page.html')
+
 def solver(input_data):
     """
     Функция, которая получает три строки:
