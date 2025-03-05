@@ -66,6 +66,37 @@ def algorithmic_task(request):
 
     return render(request, 'algorithmic_task.html', {'result': result})
 
+def solver2(input_data):
+    """
+    Принимает строку вида "A B C" и проверяет, выполняются ли
+    A < B < C или A < B > C.
+    """
+    try:
+        A_str, B_str, C_str = input_data.strip().split()
+        A, B, C = float(A_str), float(B_str), float(C_str)
+    except:
+        return "Ошибка: введите три вещественных числа через пробел"
+
+    if A < B < C:
+        return "Выполняется A < B < C"
+    elif A < B > C:
+        return "Выполняется A < B > C"
+    else:
+        return "Ни одно из неравенств не выполняется"
+
+
+def algorithmic_task2(request):
+    """
+    Отображает страницу /task/ с условием задачи и формой для ввода данных.
+    После отправки формы решает задачу и выводит результат.
+    """
+    result = None
+    if request.method == 'POST':
+        user_input = request.POST.get('user_input', '')
+        result = solver2(user_input)
+
+    return render(request, 'algorithmic_task2.html', {'result': result})
+
 ABOUT_DATA = {
     "education_link": "https://github.com/vmarshirov/WebApplicationsDevelopment/blob/main/task1/education.txt",
     "my_info": {
