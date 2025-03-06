@@ -69,6 +69,27 @@ def algorithmic_task(request):
 
     return render(request, 'algorithmic_task.html', {'result': result})
 
+def algorithmic_task2(request):
+    result = None
+
+    if request.method == "POST":
+        try:
+            a = float(request.POST["a"])
+            b = float(request.POST["b"])
+            c = float(request.POST["c"])
+
+            if a < b < c:
+                result = "Выполняется неравенство: A < B < C"
+            elif a < b > c:
+                result = "Выполняется неравенство: A < B > C"
+            else:
+                result = "Не выполняется ни одно из заданных неравенств."
+
+        except ValueError:
+            result = "Ошибка ввода! Введите корректные числа."
+
+    return render(request, "algorithmic_task2.html", {"result": result})
+
 
 ABOUT_DATA = {
     "education_link": "https://github.com/vmarshirov/WebApplicationsDevelopment/blob/main/task1/education.txt",
