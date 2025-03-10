@@ -88,7 +88,7 @@ def algorithmic_task2(request):
         except ValueError:
             result = "Ошибка ввода! Введите корректные числа."
 
-    return render(request, "algorithmic_task2.html", {"result": result})
+    return render(request, "algorithmic_task2.html", {"result": result, "list": [1,2,3]})
 
 
 ABOUT_DATA = {
